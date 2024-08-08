@@ -1,7 +1,8 @@
 +++
-title = '使用Hugo搭建个人博客'
+title = '使用 Hugo 搭建个人博客'
 date = 2024-08-07T22:53:03+08:00
 draft = false
+categories = ["technology"]
 +++
 
 ## Hugo

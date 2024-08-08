@@ -1,4 +1,58 @@
 baseURL = "https://licht.work/"
 languageCode = "zh-cn"
-title = "Licht's Blog"
+title = "Licht"
 theme = "hugo-theme-stack"
+
+[Params.Sidebar]
+subtitle = "Licht's Blog"
+
+[Params.Footer]
+since = 2024
+customText = ""
+
+[[Params.Widgets.Homepage]]
+type = "search"
+
+[[Params.Widgets.Homepage]]
+type = "archives"
+
+[Params.Widgets.Homepage.Params]
+limit = 5
+
+[[Params.Widgets.Homepage]]
+type = "categories"
+
+[Params.Widgets.Homepage.Params]
+limit = 10
+
+[[Params.Widgets.Homepage]]
+type = "tag-cloud"
+
+[Params.Widgets.Homepage.Params]
+limit = 10
+
+[[Params.Widgets.Page]]
+type = "toc"
+
+[Params.Comments]
+enable = true
+provider = "giscus"
+
+[Params.Comments.Giscus]
+repo = "LichtHong/licht.work"
+repoID = "R_kgDOMggDOQ"
+category = "giscus"
+categoryID = "DIC_kwDOMggDOc4CheUR"
+mapping = "pathname"
+lightTheme = "light"
+darkTheme = "dark"
+reactionsEnabled = 1
+emitMetadata = 0
+
+[[Menu.Social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/LichtHong"
+[Menu.Social.Params]
+icon = "brand-github"
+
