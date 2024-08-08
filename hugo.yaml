@@ -1,0 +1,53 @@
+baseURL: https://licht.work/
+languageCode: zh-cn
+title: Licht
+theme: hugo-theme-stack
+
+permalinks:
+    pages: /:slug/
+
+params:
+    mainSections:
+        - posts
+    favicon: /favicon.ico
+
+    menu:
+        main: [ ]
+        social:
+            -   identifier: github
+                name: GitHub
+                url: https://github.com/LichtHong
+                params:
+                    icon: brand-github
+
+    sidebar:
+        subtitle: Licht's Blog
+
+    footer:
+        since: 2024
+
+    article:
+        math: true
+
+    comments:
+        enabled: true
+        provider: giscus
+        giscus:
+            repo: LichtHong/licht.work
+            repoID: R_kgDOMggDOQ
+            category: giscus
+            categoryID: DIC_kwDOMggDOc4CheUR
+            mapping: title
+            lightTheme: light
+            darkTheme: dark
+            reactionsEnabled: 1
+            emitMetadata: 0
+
+    widgets:
+        homepage:
+            -   type: search
+            -   type: archives
+            -   type: categories
+            -   type: tag-cloud
+        page:
+            -   type: toc
