@@ -1,4 +1,4 @@
-baseURL = 'https://licht.work/'
-languageCode = 'zh-cn'
-title = 'My New Hugo Site'
-theme = 'hugo-theme-stack'
+baseURL = "https://licht.work/"
+languageCode = "zh-cn"
+title = "Licht's Blog"
+theme = "hugo-theme-stack"
