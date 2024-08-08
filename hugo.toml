@@ -3,56 +3,131 @@ languageCode = "zh-cn"
 title = "Licht"
 theme = "hugo-theme-stack"
 
-[Params.Sidebar]
+[permalinks]
+page = "/:slug/"
+
+[params]
+mainSections = [ "post" ]
+featuredImageField = "image"
+rssFullContent = true
+
+[params.footer]
+since = 2024
+
+[params.dateFormat]
+
+[params.sidebar]
+compact = false
 subtitle = "Licht's Blog"
 
-[Params.Footer]
-since = 2024
-customText = ""
+    [params.sidebar.avatar]
+    enabled = true
+    local = true
+    src = "img/avatar.png"
 
-[[Params.Widgets.Homepage]]
-type = "search"
+[params.article]
+headingAnchor = false
+math = false
+toc = true
+readingTime = true
 
-[[Params.Widgets.Homepage]]
-type = "archives"
+    [params.article.license]
+    enabled = false
+    default = "Licensed under CC BY-NC-SA 4.0"
 
-[Params.Widgets.Homepage.Params]
-limit = 5
-
-[[Params.Widgets.Homepage]]
-type = "categories"
-
-[Params.Widgets.Homepage.Params]
-limit = 10
-
-[[Params.Widgets.Homepage]]
-type = "tag-cloud"
-
-[Params.Widgets.Homepage.Params]
-limit = 10
-
-[[Params.Widgets.Page]]
-type = "toc"
-
-[Params.Comments]
-enable = true
+[params.comments]
+enabled = true
 provider = "giscus"
 
-[Params.Comments.Giscus]
-repo = "LichtHong/licht.work"
-repoID = "R_kgDOMggDOQ"
-category = "giscus"
-categoryID = "DIC_kwDOMggDOc4CheUR"
-mapping = "pathname"
-lightTheme = "light"
-darkTheme = "dark"
-reactionsEnabled = 1
-emitMetadata = 0
+    [params.comments.giscus]
+    repo = "LichtHong/licht.work"
+    repoID = "R_kgDOMggDOQ"
+    category = "giscus"
+    categoryID = "DIC_kwDOMggDOc4CheUR"
+    mapping = "og:title"
+    lightTheme = "light"
+    darkTheme = "dark"
+    reactionsEnabled = 1
+    emitMetadata = 0
 
-[[Menu.Social]]
+[[params.widgets.homepage]]
+type = "search"
+
+[[params.widgets.homepage]]
+type = "archives"
+
+    [params.widgets.homepage.params]
+    limit = 5
+
+[[params.widgets.homepage]]
+type = "categories"
+
+    [params.widgets.homepage.params]
+    limit = 10
+
+[[params.widgets.homepage]]
+type = "tag-cloud"
+
+    [params.widgets.homepage.params]
+    limit = 10
+
+[[params.widgets.page]]
+type = "toc"
+
+[params.opengraph.twitter]
+card = "summary_large_image"
+
+[params.defaultImage.opengraph]
+enabled = false
+local = false
+
+[params.colorScheme]
+toggle = true
+default = "auto"
+
+[params.imageProcessing.cover]
+enabled = true
+
+[params.imageProcessing.content]
+enabled = true
+
+[menu]
+main = [ ]
+
+[[menu.social]]
 identifier = "github"
 name = "GitHub"
 url = "https://github.com/LichtHong"
-[Menu.Social.Params]
-icon = "brand-github"
 
+    [menu.social.params]
+    icon = "brand-github"
+
+[related]
+includeNewer = true
+threshold = 60
+toLower = false
+
+[[related.indices]]
+name = "tags"
+weight = 100
+
+[[related.indices]]
+name = "categories"
+weight = 200
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.tableOfContents]
+endLevel = 4
+ordered = true
+startLevel = 2
+
+[markup.highlight]
+noClasses = false
+codeFences = true
+guessSyntax = true
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+tabWidth = 4
